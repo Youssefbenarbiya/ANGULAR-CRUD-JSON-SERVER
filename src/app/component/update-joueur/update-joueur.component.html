@@ -1,0 +1,45 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sd-5">
+            <div class="image">
+                image ici
+            </div>
+        </div>
+        <!--form-->
+        <div class="col-md-6">
+            <div class="card">
+                <h5>Update Joueur</h5>
+                <div class="row">
+                    <form >
+                        <div class="form-group">
+                          
+                          
+                          <label for="exampleInputEmail1">Nom</label>
+                          <input type="email" [(ngModel)]="joueurdata.nom" name="nom" class="form-control" placeholder="Enter nom">
+
+                          <label for="exampleInputEmail1">Prenom</label>
+                          <input type="email" [(ngModel)]="joueurdata.Prenom" name="Prenom"  class="form-control"  placeholder="Enter Prenom">
+
+                          <label for="exampleInputEmail1">Email address</label>
+                          <input type="email" [(ngModel)]="joueurdata.email" name="email"  class="form-control"  placeholder="Enter email">
+                          
+                          <label for="exampleInputEmail1">Nationalité</label>
+                          <input type="email" [(ngModel)]="joueurdata.Nationalite" name="Nationalite"   class="form-control"   placeholder="Enter Nationalite">
+
+                          <label for="exampleInputEmail1">Numero</label>
+                          <input type="email" [(ngModel)]="joueurdata.Numero" name="Numero"  class="form-control"  placeholder="Enter Numero">
+
+                          <label for="exampleInputEmail1">Position</label>
+                          <input type="email" [(ngModel)]="joueurdata.Position" name="Position" class="form-control"  placeholder="Enter Position">
+                        </div>
+                        <div class="text-center mt-2">
+                            <button type="submit" (click)="update()" class="btn btn-primary" >Update</button>&nbsp;
+                            <button type="reset" class="btn btn-success">Reset</button>
+                        </div>
+                    
+                      </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

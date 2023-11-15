@@ -1,0 +1,44 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg" style="background-color: #b36df1;">
+    <div class="container-fluid">
+        <h1 style="color: white; font-size: 24px;">
+            Admin view page
+        </h1>
+    </div>
+    <!-- Buttons -->
+    <button routerLink="/adminlogin-signup" (click)="logout()" class="btn btn-dark">Logout</button>&nbsp;
+    <button routerLink="/" class="btn btn-warning">Home</button>
+</nav>
+
+<!-- Table -->
+<div class="container mt-4">
+    <h5 style="font-size: 35px; color: #6412f3;">User Query list</h5>
+    <table class="table table-striped" style="background-color: #8a4baf; color: white;">
+        <thead>
+            <tr>
+                <th scope="col">Number</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Message</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of data">
+                <td>{{item.id}}</td>
+                <td>{{item.nom}}</td>
+                <td>{{item.email}}</td>
+                <td>{{item.message}}</td>
+                <td><i (click)="item.id && delete(item.id)" style="color: red;" class="fas fa-trash"></i></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<style>
+    /* Table Styles */
+    table {
+        background-color: #8a4baf; /* Use the same darker purple color as in the previous section */
+        color: white;
+    }
+</style>

@@ -1,0 +1,29 @@
+/* For the icon itself */
+.fa-trash {
+    pointer-events: auto;
+  }
+  
+  /* For the parent element (if any) */
+  .parent-element {
+    pointer-events: auto;
+  }
+  /* Increase z-index for the icon */
+.fa-trash {
+    z-index: 1;
+  }
+  
+  /* Decrease z-index for the covering element */
+  .covering-element {
+    z-index: 0;
+  }
+  .footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #039be5;
+    left:0;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }

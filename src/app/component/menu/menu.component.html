@@ -1,0 +1,87 @@
+<app-header></app-header>
+<!--table-->
+<div class="col-sm-7">
+  <!--search box-->
+  <div class="form-outline mt-3">
+    <input type="search" [(ngModel)]="searchText" id="form1" class="form-control" placeholder="chercher" />
+    <label class="form-label" for="form1">Search</label>
+  </div>
+<table class="table">
+    <thead class="thead-dark">
+      
+      <tr>
+        
+        <th scope="col">Nom</th>
+        <th scope="col">Prenom</th>
+        <th scope="col">Numéro</th>
+        <th scope="col">Email</th>
+        <th scope="col">Nationalité</th>
+        <th scope="col">position</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of data|filter:searchText">
+        
+        <td>{{item.nom}}</td>
+        <td>{{item.Prenom}}</td>
+        <td>{{item.Numero}}</td>
+        <td scope="row">{{item.email}}</td>
+        <td>{{item.Nationalite}}</td>
+        <td>{{item.Position}}</td>
+        <td><i style="color: blue;" routerLink="/updateJoueur/{{item.id}}" class="fas fa-edit"></i>&nbsp;
+          <i style="color: red;" (click)="item.id && confirmDelete(item.id)" class="fas fa-trash"></i>
+
+          </td>
+      </tr> 
+    </tbody>
+  </table>
+  
+ 
+</div>
+
+<div class="footer">
+  <h5 style="font-size: 1rem;">@copyright Youssef Benarbian 2023&nbsp;
+  <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Contacter nous</button></h5>
+</div>
+
+<!--footer model-->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: #039be5;">
+        <h5 class="modal-title" style="color: white;" id="exampleModalLabel">Contacter nous</h5>
+        <button type="button" style="background-color: #039be5;" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+        
+        </button>
+      </div>
+      <div class="modal-body">
+        <!--form-->
+        <form [formGroup]="contacterNousForm">
+          <div class="form-group mt-2">
+            <label for="exampleInputEmail1">Nom</label>
+            <input type="text" class="form-control" formControlName="nom" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" formControlName="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+       
+          <div class="form-group mt-2">
+            <label for="exampleInputEmail1">Message</label>
+            <textarea type="text" rows="4" class="form-control" formControlName="message" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"></textarea>
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+       
+        </form>
+      </div>
+      <div class="modal-footer" style="background-color: #039be5;">
+        <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
+        <button type="button" (click)="contacterNousSubmit(this.contacterNousForm.value)" class="btn btn-dark">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+.card {
+  top: 6ex;
+  left: 40x;
+  width: 435px;
+  padding: 31px 40px;
+  transform: translate(-50x, -50E);
+  border: 1px solid black;
+}
+
+h5{
+    width: 600px;
+   font-size: 30px;
+}

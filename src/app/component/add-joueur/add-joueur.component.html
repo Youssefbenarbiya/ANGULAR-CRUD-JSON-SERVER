@@ -1,0 +1,46 @@
+<app-header></app-header>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sd-5">
+            <div class="image">
+                image ici
+            </div>
+        </div>
+        <!--form-->
+        <div class="col-md-6">
+            <div class="card">
+                <h5>Ajouter Joueur</h5>
+                <div class="row">
+                    <form [formGroup]="joueurform">
+                        <div class="form-group">
+                          
+                          
+                          <label for="exampleInputEmail1">Nom</label>
+                          <input type="email" class="form-control" formControlName="nom" placeholder="Enter nom">
+
+                          <label for="exampleInputEmail1">Prenom</label>
+                          <input type="email" class="form-control" formControlName="Prenom" placeholder="Enter Prenom">
+
+                          <label for="exampleInputEmail1">Email address</label>
+                          <input type="email" class="form-control" formControlName="email" placeholder="Enter email">
+                          
+                          <label for="exampleInputEmail1">Nationalité</label>
+                          <input type="email" class="form-control"  formControlName="Nationalite"  placeholder="Enter Nationalite">
+
+                          <label for="exampleInputEmail1">Numero</label>
+                          <input type="email" class="form-control" formControlName="Numero" placeholder="Enter Numero">
+
+                          <label for="exampleInputEmail1">Position</label>
+                          <input type="email" class="form-control" formControlName="Position"  placeholder="Enter Position">
+                        </div>
+                        <div class="text-center mt-2">
+                            <button type="submit" class="btn btn-primary" (click)="submitjoueur(this.joueurform.value)" [disabled]="this.joueurform.invalid">Submit</button>&nbsp;
+                            <button type="reset" class="btn btn-success">Reset</button>
+                        </div>
+                    
+                      </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

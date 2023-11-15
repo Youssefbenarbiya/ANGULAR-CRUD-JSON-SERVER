@@ -1,0 +1,44 @@
+{
+  "posts": [
+    {
+      "email": "lzldl@dd",
+      "nom": "ali",
+      "Prenom": "ali",
+      "Nationalite": "algerian",
+      "Numero": "6",
+      "Position": "ac",
+      "id": 4
+    },
+    {
+      "email": "y",
+      "nom": "y",
+      "Prenom": "y",
+      "Nationalite": "y",
+      "Numero": "y",
+      "Position": "y",
+      "id": 9
+    },
+    {
+      "email": "a@gmail.com",
+      "nom": "a",
+      "Prenom": "a",
+      "Nationalite": "a",
+      "Numero": "45",
+      "Position": "re",
+      "id": 10
+    },
+    {
+      "email": "a@gmail.com",
+      "nom": "a",
+      "Prenom": "a",
+      "Nationalite": "a",
+      "Numero": "45",
+      "Position": "re",
+      "id": 11
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

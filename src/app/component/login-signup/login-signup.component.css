@@ -1,0 +1,14 @@
+.img-fluid {
+    height: 100%;
+    border-radius: 10px;
+    width: 100%;
+}
+
+section {
+    background-color: #ffffff; 
+}
+
+.card {
+    border-radius: 5px;
+    background-color: #b36df1; 
+}
